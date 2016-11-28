@@ -2,12 +2,12 @@
   "name": "postgres-challenge",
   "version": "1.0.0",
   "description": "An app to explore using postgres with Node.js",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon server",
+    "dev": "nodemon src/server",
     "lint": "eslint './**/*.js'",
     "precommit": "npm run lint",
-    "start": "node server"
+    "start": "node src/server"
   },
   "repository": {
     "type": "git",

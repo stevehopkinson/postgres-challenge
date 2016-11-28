@@ -1,16 +1,26 @@
-<ul class="collection">
-  {{#each users}}
-  <li class="collection-item">{{this.firstName}} {{this.lastName}}, {{this.age}}, {{this.type}}
-    <a href="/edituser?id={{this.id}}"><i style='font-size:100%' class='material-icons'>mode_edit</i></a>
-    <a href="/deleteuser?id={{this.id}}"><i style='font-size:100%' class='material-icons'>delete_forever</i></a>
-  </li>
-  {{/each}}
-</ul>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">Users</a>
+  </div>
+</nav>
 
-<form method="post" action="/createuser">
-  <input type="text" name="firstName" placeholder="First Name Here"/>
-  <input type="text" name="lastName" placeholder="Last Name Here"/>
-  <input type="number" name="age" placeholder="Age Here"/>
-  <input type="text" name="type" placeholder="Profession Here"/>
-  <input type="submit" value="Submit">
-</form>
+<div class="container">
+
+  <ul class="collection">
+    {{#each users}}
+    <li class="collection-item">{{this.firstName}} {{this.lastName}}, {{this.age}}, {{this.type}}
+      <a href="/edituser?id={{this.id}}"><i style='font-size:100%' class='material-icons'>mode_edit</i></a>
+      <a href="/deleteuser?id={{this.id}}"><i style='font-size:100%' class='material-icons'>delete_forever</i></a>
+    </li>
+    {{/each}}
+  </ul>
+
+  <form method="post" action="/createuser">
+    <input type="text" name="firstName" placeholder="First Name Here"/>
+    <input type="text" name="lastName" placeholder="Last Name Here"/>
+    <input type="number" name="age" placeholder="Age Here"/>
+    <input type="text" name="type" placeholder="Profession Here"/>
+    <input class="btn waves-effect waves-light" type="submit" value="Submit">
+  </form>
+
+</div>

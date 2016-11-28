@@ -1,3 +1,10 @@
+const http = require('http');
+
+// For Preventing Sleeps
+setInterval(() => {
+  http.get('http://stick-fieldkinson.herokuapp.com');
+}, 300000); // every 5 minutes
+
 const env = require('env2');
 const {
   createServer,
