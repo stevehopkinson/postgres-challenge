@@ -7,7 +7,6 @@ module.exports = (server) => {
     path: './views',
     layout: 'default',
     layoutPath: './views/layout',
-    helpersPath: './views/helpers',
   });
 
   return server;
